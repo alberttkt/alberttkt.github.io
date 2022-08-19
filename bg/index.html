@@ -38,18 +38,33 @@
 
   </header>
 
-  <div id="menu" class="Menu">
+  <nav id="Menu" class="Menu">
 
 
-    <div id="phoneDropDown" onclick="show">
-      <div id="line1" class="lines"></div>
-      <div id="line2" class="lines"></div>
-      <div id="line3" class="lines"></div>
-    </div>
+   
 
     <div id="mainBarre"></div>
 
     <img src="../img/logo/logo1.PNG" id="logo" alt="logo" onclick="scrolling(home)">
+
+    
+
+    <div id="menuToggle">
+
+        <input style="left: 73% ; top : 0;" type="checkbox" />
+          <span class="menuButton"></span>
+          <span class="menuButton"></span>
+          <span class="menuButton"></span>
+
+    <ul id="menu">
+      <li><a onclick="scrolling(titleAbout)">About us</a></li>
+      <li><a onclick="scrolling(titleWhy);">our services</a></li>
+      <li><a onclick="scrolling(titleContact);">contact us</a></li>
+      <li><a onclick="scrolling(titleMore);">more</a></li>
+      <li><a href="../bg/">български</a></li>
+      <li><a href="../fr/" id="lastLangauage">francais</a></li>
+    </ul>
+   </div>
 
     <div>
       <div class="scroll_animation"></div>
@@ -74,15 +89,15 @@
         <div id="fullArrow">
           <div class="arrow left"></div>
           <div class="arrow right"></div>
-        </div> български
+        </div> english
       </button>
       <div class="dropdown-content">
-        <a href="../en/">english</a>
+        <a href="../bg/">български</a>
         <a href="../fr/" id="lastLangauage">francais</a>
       </div>
     </div>
 
-  </div>
+  </nav>
 
 
 
@@ -93,7 +108,7 @@
     <div id="AboutContainer" class="container">
       <div id="AboutUsBarre" class="contentBarre"></div>
       <div id="AboutUs">
-        <h2 id="titleAbout" class="titles">Bulgarian Version</h2>
+        <h2 id="titleAbout" class="titles">Bulgarian version </h2>
         <p id="textAbout" class="contentText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam cum ipsum neque doloribus
           veniam minima possimus ex qui, temporibus optio libero veritatis voluptatibus deserunt incidunt eos dicta quos
           similique ab, itaque reprehenderit laudantium magnam! Harum ut vel magnam suscipit in neque amet, architecto
