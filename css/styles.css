@@ -73,9 +73,9 @@ header{
   background: none;
   top: 25%;
   position: relative;
-  
+  overflow: hidden;
   font-size: 50px;
-  height: 50%;
+  height: auto;
   
   
   -webkit-transition: width 500ms ease;
