@@ -643,7 +643,7 @@ ul {
 .imageMobile{
   display: none;
   width: 100%;
-  height: 280px;
+  height: 20vmax;
   object-fit: cover;
   object-position: bottom;
 }
@@ -724,9 +724,6 @@ ul {
     display: flex;
   }
 
-  .parallax{
-    display: none;
-  }
   .contentBarre{
     width: 1;
     min-height: 100%;
