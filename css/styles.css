@@ -719,8 +719,13 @@ ul {
   .contentText{
     font-size: 2vh;
   }
+	
   #menuToggle {
     display: flex;
+  }
+	
+  .contentText{
+    font-size: 2vh;
   }
   
 }
