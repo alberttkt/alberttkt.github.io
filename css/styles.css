@@ -725,5 +725,5 @@ ul {
 }
 
 @media (pointer:none), (pointer:coarse) {
-  .parallax{ background-attachment:scroll;}
+  .parallax{ display: none;}
 }
