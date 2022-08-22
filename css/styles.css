@@ -482,7 +482,6 @@ body {
 
 .parallax {
   /* The image used */
-
   /* Set a specific height */
   min-height: 300px;
   /* Create the parallax scrolling effect */
@@ -640,7 +639,13 @@ ul {
   transform: none;
 }
 
-
+.imageMobile{
+  display: none;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: bottom;
+}
 
 
 
@@ -726,4 +731,5 @@ ul {
 
 @media (pointer:none), (pointer:coarse) {
   .parallax{ display: none;}
+  .imageMobile{display: block;}
 }
