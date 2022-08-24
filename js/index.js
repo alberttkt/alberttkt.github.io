@@ -149,11 +149,16 @@ window.addEventListener('scroll', () => {
     header_body.style.width="50%"
     header_title.style.width="50%"
 
+    header_band.style.height = "80%";
+    aboutUsTitle.style.width="0";
+    AboutUsBarre.style.height = "0";
+    AboutUsBarre.style.borderColor="#f1f1f1";
+
 
 
     
     break;
-    case html.scrollTop < header.scrollHeight/3:
+    case html.scrollTop < header.scrollHeight/4:
   
     
       aboutUsTitle.style.width="0";
@@ -175,7 +180,7 @@ window.addEventListener('scroll', () => {
 
   
     break;
-    case html.scrollTop > header.scrollHeight/3:
+    case html.scrollTop > header.scrollHeight/2:
   
     header_band.style.height = "0";
     console.log(aboutUs.scrollHeight)
