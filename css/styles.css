@@ -30,8 +30,9 @@
     margin: 0;
     padding: 0;
     font-family: MainFont;
-    overflow-x: clip;
+    overflow-x:clip;
     -ms-overflow-style: none;  /* IE and Edge */
+  
     scrollbar-width: none;  /* Firefox */
 
 }
@@ -44,7 +45,7 @@ header{
     
     justify-content: center;
     margin-top: 75px;
-    margin-bottom: 2vh;
+    
     font-size: 50vh;
     display: flex;
     
@@ -60,11 +61,11 @@ header{
   border-radius: 30px;
   
   border: solid rgb(13,160,150) 4px;
-  -webkit-transition: margin 400ms cubic-bezier(0, 0.99, 1, 1);
-  -moz-transition: margin 400ms cubic-bezier(0, 0.99, 1, 1);
-  -ms-ransition: margin 400ms cubic-bezier(0, 0.99, 1, 1);
-  -o-transition: margin 400ms cubic-bezier(0, 0.99, 1, 1);
-  transition: margin 400ms cubic-bezier(0, 0.99, 1, 1) ;
+  -webkit-transition: all 800ms cubic-bezier(0, 0.99, 1, 1);
+  -moz-transition: all 800ms cubic-bezier(0, 0.99, 1, 1);
+  -ms-ransition: all 800ms cubic-bezier(0, 0.99, 1, 1);
+  -o-transition: all 800ms cubic-bezier(0, 0.99, 1, 1);
+  transition: all 800ms cubic-bezier(0, 0.99, 1, 1) ;
 }
 
 #header_title{
@@ -72,16 +73,16 @@ header{
   background: none;
   top: 25%;
   position: relative;
-  
+  overflow: hidden;
   font-size: 50px;
-  height: 50%;
+  height: auto;
   
   
-  -webkit-transition: width 500ms ease;
-  -moz-transition: width 500ms ease;
-  -ms-transition: width 500ms ease;
-  -o-transition: width 500ms ease;
-  transition: width 500ms ease;
+  -webkit-transition: width 1000ms ease;
+  -moz-transition: width 1000ms ease;
+  -ms-transition: width 1000ms ease;
+  -o-transition: width 1000ms ease;
+  transition: width 1000ms ease;
   
 }
 
@@ -122,11 +123,11 @@ header{
   
   font-size: 32px;
 
-  -webkit-transition: width 500ms ease;
-  -moz-transition: width 500ms ease;
-  -ms-transition: width 500ms ease;
-  -o-transition: width 500ms ease;
-  transition: width 500ms ease ;
+  -webkit-transition: width 1000ms ease;
+  -moz-transition: width 1000ms ease;
+  -ms-transition: width 1000ms ease;
+  -o-transition: width 1000ms ease;
+  transition: width 1000ms ease ;
   
 }
 
@@ -203,7 +204,7 @@ h2{
     padding-top: 10px;
 
     height: 65px;
-    
+    z-index: 1;
 
     width: 100%;
     display:flex;
@@ -455,8 +456,9 @@ body {
 }  
 
 .contentBarre{
+  position:relative;
   width: 1;
-  min-height: 100%;
+
 
   border-radius: 30px;
   
@@ -464,13 +466,31 @@ body {
   margin-right: 4vh;
   margin-left: 4vh;
 
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+  
 }
 
+
+
 .titles{
+
   font-family: TitleHeader;
   color: black;
   font-size: 5vh;
   padding-bottom: 3vh;
+  overflow:hidden;
+  white-space: nowrap;
+
+
+  -webkit-transition: width 1000ms ease;
+  -moz-transition: width 1000ms ease;
+  -ms-transition: width 1000ms ease;
+  -o-transition: width 1000ms ease;
+  transition: width 1000ms ease;
 }
 
 .contentText{
@@ -478,12 +498,16 @@ body {
   text-align: justify;
   padding-left: 4%;
   width: 86%;
+
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
 }
 
 .parallax {
   /* The image used */
-  background-image: url("../img/image1.jpeg");
-
   /* Set a specific height */
   min-height: 300px;
   /* Create the parallax scrolling effect */
@@ -491,6 +515,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+  transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
 }
 
 
@@ -636,8 +665,13 @@ ul {
   transform: none;
 }
 
-
-
+.imageMobile{
+  display: none;
+  width: 100%;
+  height: 40vmax;
+  object-fit: cover;
+  object-position: bottom;
+}
 
 
 
@@ -709,11 +743,28 @@ ul {
 
   .contentText{
     font-size: 2vh;
+    width: 90%;
   }
   #menuToggle {
     display: flex;
   }
 
+  .contentBarre{
+    width: 1;
+    min-height: 100%;
+  
+    border-radius: 30px;
+    
+    border: solid rgb(13,160,150) 4px;
+    margin-right: 2vh;
+    margin-left: 2vh;
+  
+  }
+
   
 }
 
+@media (pointer:none), (pointer:coarse) {
+  .parallax{ display: none;}
+  .imageMobile{display: block;}
+}

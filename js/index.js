@@ -1,3 +1,37 @@
+const parallaxes = document.getElementsByClassName("parallax")
+
+
+var image1 = new Image();
+image1.onload = function() {
+  parallaxes[0].style.backgroundImage="url("+image1.src+")"
+  console.log("aaa")
+}
+image1.src = '../img/image1.jpeg';
+
+
+
+var image2 = new Image();
+image2.src = '../img/image2.jpeg';
+image2.onload = function() {
+  parallaxes[1].style.backgroundImage="url("+image2.src+")"
+  console.log("bb")
+
+}
+
+
+
+var image3 = new Image();
+image3.onload = function() {
+  parallaxes[2].style.backgroundImage="url("+image3.src+")"
+  console.log("ccc")
+
+}
+image3.src = '../img/image3.jpeg';
+
+
+
+
+
 
 let aboutUsShortcut= document.getElementById("shortcut1") ;
 let titleAbout="titleAbout",
@@ -29,7 +63,10 @@ const more = document.getElementById("more");
 
 const header_band = document.getElementById("header_band")
 const header_title = document.getElementById("header_title")
-const header_body = document.getElementById("header_body")
+const header_body = document.getElementById("header_body") 
+const aboutUsTitle = document.getElementById("titleAbout") 
+const AboutUsBarre = document.getElementById("AboutUsBarre")
+const textAbout = document.getElementById("textAbout")
 
 
 
@@ -44,18 +81,23 @@ const mainBarre = document.getElementById("mainBarre")
 
 //console.log(header_band)
 
-
-header_band.style.marginRight = "3vw";
-header_band.style.marginLeft = "3vw";
-header_body.style.width="50%"
-header_title.style.width="50%"
+header_band.style.marginRight = "0";
+header_band.style.marginLeft = "0";
+header_body.style.width="0"
+header_title.style.width="0"
+aboutUsTitle.style.width="0";
+AboutUsBarre.style.height = "0";
+// header_band.style.marginRight = "3vw";
+// header_band.style.marginLeft = "3vw";
+// header_body.style.width="50%"
+// header_title.style.width="50%"
 
 
 window.addEventListener('scroll', () => {  
   
   const scrollTop = html.scrollTop;
   
-  //console.log(ourService.scrollHeight)
+  console.log(header.scrollHeight)
   const maxScrollTop = html.scrollHeight - window.innerHeight;
   //console.log(scrollTop);
   switch (true) {
@@ -106,21 +148,53 @@ window.addEventListener('scroll', () => {
     header_band.style.marginLeft = "3vw";
     header_body.style.width="50%"
     header_title.style.width="50%"
-    
+
+
 
     
     break;
-    case html.scrollTop > header.scrollHeight/4:
+    case html.scrollTop < header.scrollHeight/3:
   
+    
+      aboutUsTitle.style.width="0";
+      AboutUsBarre.style.height = "0";
+      AboutUsBarre.style.borderColor="#f1f1f1";
+    
+
+      textAbout.style.color="#f1f1f1"
+    
+      header_band.style.height = "80%";
+
     header_band.style.marginRight = "0";
     header_band.style.marginLeft = "0";
-
-
     header_body.style.width="0";
     header_title.style.width="0";
+    
+
+    
+
   
+    break;
+    case html.scrollTop > header.scrollHeight/3:
+  
+    header_band.style.height = "0";
+    console.log(aboutUs.scrollHeight)
+    AboutUsBarre.style.height = aboutUs.scrollHeight+"px";
+    AboutUsBarre.style.borderColor="rgb(13,160,150)";
 
 
+    aboutUsTitle.style.width="300px";
+
+    textAbout.style.color="rgb(80, 80, 80)"
+    
+    header_band.style.marginRight = "0";
+    header_band.style.marginLeft = "0";
+    header_body.style.width="0";
+    header_title.style.width="0";
+
+    
+
+  
     break;
     default:
 
@@ -206,6 +280,11 @@ function splitIn(txt,i){
 
 
 }
+setTimeout(() => { header_band.style.marginRight = "3vw";
+header_band.style.marginLeft = "3vw";
+header_body.style.width="50%"
+header_title.style.width="50%"  }, 700);
+
 
 
 
