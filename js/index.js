@@ -86,7 +86,7 @@ header_band.style.marginLeft = "0";
 header_body.style.width="0"
 header_title.style.width="0"
 aboutUsTitle.style.width="0";
-AboutUsBarre.style.height = "0";
+//AboutUsBarre.style.height = "0";
 // header_band.style.marginRight = "3vw";
 // header_band.style.marginLeft = "3vw";
 // header_body.style.width="50%"
@@ -149,10 +149,14 @@ window.addEventListener('scroll', () => {
     header_body.style.width="50%"
     header_title.style.width="50%"
 
+
+    AboutUsBarre.style.marginTop ="50vh"
+
+
     header_band.style.height = "80%";
     aboutUsTitle.style.width="0";
-    AboutUsBarre.style.height = "0";
-    AboutUsBarre.style.borderColor="#f1f1f1";
+    // AboutUsBarre.style.height = "0";
+    // AboutUsBarre.style.borderColor="#f1f1f1";
 
 
 
@@ -162,8 +166,8 @@ window.addEventListener('scroll', () => {
   
     
       aboutUsTitle.style.width="0";
-      AboutUsBarre.style.height = "0";
-      AboutUsBarre.style.borderColor="#f1f1f1";
+      //AboutUsBarre.style.height = "0";
+      AboutUsBarre.style.marginTop ="50vh"
     
 
       textAbout.style.color="#f1f1f1"
@@ -184,8 +188,10 @@ window.addEventListener('scroll', () => {
   
     header_band.style.height = "0";
     console.log(aboutUs.scrollHeight)
-    AboutUsBarre.style.height = aboutUs.scrollHeight+"px";
-    AboutUsBarre.style.borderColor="rgb(13,160,150)";
+    
+    AboutUsBarre.style.marginTop ="0"
+    // AboutUsBarre.style.height = aboutUs.scrollHeight+"px";
+    // AboutUsBarre.style.borderColor="rgb(13,160,150)";
 
 
     aboutUsTitle.style.width="300px";
